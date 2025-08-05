@@ -24,5 +24,5 @@ Route::middleware([
 });
 
 Route::get('/home', function () {
-    return view('home',['title' => 'Home']);
+    return view('home',['title' => 'Home - Fragrance Universe']);
 });
