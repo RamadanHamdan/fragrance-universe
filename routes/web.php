@@ -26,3 +26,19 @@ Route::middleware([
 Route::get('/home', function () {
     return view('home',['title' => 'Home - Fragrance Universe']);
 });
+
+Route::get('/about', function () {
+    return view('about',['title' => 'About - Fragrance Universe']);
+});
+
+Route::get('/contact', function () {
+    return view('contact',['title' => 'Contact - Fragrance Universe']);
+});
+
+Route::get('/collections', function () {
+    return view('collections',['title' => 'Collections - Fragrance Universe']);
+});
+
+Route::get('/find', function () {
+    return view('find',['title' => 'Find Your Scent - Fragrance Universe']);
+});
