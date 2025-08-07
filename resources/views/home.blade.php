@@ -2,226 +2,97 @@
     <x-slot:title>{{ $title }}</x-slot:title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-12">
-        <!-- Search Section -->
-        <section class="mb-16">
-            <div class="max-w-4xl mx-auto p-8 rounded-xl bg-white search-box">
-                <h3 class="text-2xl font-semibold primary-text mb-6">Find Your Fragrance</h3>
-                
-                <!-- Main Search -->
-                <div class="relative mb-6">
-                    <input type="text" placeholder="Search by brand, notes, or description..." 
-                        class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                    <button class="absolute right-2 top-2 primary-bg text-white px-6 py-2 rounded-lg">
-                        Search
-                    </button>
-                </div>
-                
-                <!-- Advanced Filters -->
-                <div class="mb-6">
-                    <h4 class="font-medium text-gray-700 mb-3">Filter by:</h4>
-                    <div class="flex flex-wrap gap-3">
-                        <select class="flex-1 min-w-[200px] p-3 border border-gray-300 rounded-lg">
-                            <option value="">Top Notes</option>
-                            <option>Citrus</option>
-                            <option>Fruity</option>
-                            <option>Floral</option>
-                            <option>Spicy</option>
-                        </select>
-                        <select class="flex-1 min-w-[200px] p-3 border border-gray-300 rounded-lg">
-                            <option value="">Middle Notes</option>
-                            <option>Woody</option>
-                            <option>Aromatic</option>
-                            <option>Herbal</option>
-                            <option>Marine</option>
-                        </select>
-                        <select class="flex-1 min-w-[200px] p-3 border border-gray-300 rounded-lg">
-                            <option value="">Base Notes</option>
-                            <option>Musk</option>
-                            <option>Vanilla</option>
-                            <option>Amber</option>
-                            <option>Patchouli</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <!-- Weather Filter -->
-                <div>
-                    <h4 class="font-medium text-gray-700 mb-3">Best for weather:</h4>
-                    <div class="flex space-x-4 overflow-x-auto pb-2">
-                        <button class="weather-filter-btn bg-blue-100 text-blue-800 px-4 py-2 rounded-lg flex flex-col items-center">
-                            <img src="https://placehold.co/30x30" alt="Sun icon for summer weather filter" class="mb-1">
-                            <span>Summer</span>
-                        </button>
-                        <button class="weather-filter-btn bg-gray-100 text-gray-800 px-4 py-2 rounded-lg flex flex-col items-center">
-                            <img src="https://placehold.co/30x30" alt="Snowflake icon for winter weather filter" class="mb-1">
-                            <span>Winter</span>
-                        </button>
-                        <button class="weather-filter-btn bg-green-100 text-green-800 px-4 py-2 rounded-lg flex flex-col items-center">
-                            <img src="https://placehold.co/30x30" alt="Leaf icon for spring weather filter" class="mb-1">
-                            <span>Spring</span>
-                        </button>
-                        <button class="weather-filter-btn bg-yellow-100 text-yellow-800 px-4 py-2 rounded-lg flex flex-col items-center">
-                            <img src="https://placehold.co/30x30" alt="Leaf falling icon for autumn weather filter" class="mb-1">
-                            <span>Autumn</span>
-                        </button>
-                        <button class="weather-filter-btn bg-purple-100 text-purple-800 px-4 py-2 rounded-lg flex flex-col items-center active">
-                            <img src="https://placehold.co/30x30" alt="Rain cloud icon for rainy weather filter" class="mb-1">
-                            <span>Rainy</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Results Section -->
-        <section>
-            <div class="flex justify-between items-center mb-8">
-                <h3 class="text-2xl font-semibold primary-text">Featured Fragrances</h3>
-                <div class="text-sm">
-                    <span class="mr-2">Sort by:</span>
-                    <select class="border border-gray-300 rounded-lg px-3 py-1">
-                        <option>Most Popular</option>
-                        <option>Newest</option>
-                        <option>Price: Low to High</option>
-                        <option>Price: High to Low</option>
-                    </select>
-                </div>
-            </div>
-            
-            <!-- Perfume Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                <!-- Perfume Card 1 -->
-                <div class="perfume-card bg-white rounded-xl overflow-hidden">
-                    <div class="relative">
-                        <img src="https://placehold.co/400x400" alt="Chanel No. 5 perfume bottle with minimalist design against neutral background" class="w-full h-64 object-contain">
-                        <div class="absolute top-2 right-2 flex space-x-2">
-                            <span class="bg-green-500 text-white text-xs px-2 py-1 rounded">Bestseller</span>
-                            <span class="bg-yellow-500 text-white text-xs px-2 py-1 rounded">New</span>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h4 class="font-bold text-lg">Chanel No. 5</h4>
-                                <p class="text-gray-600 text-sm">Eau de Parfum</p>
-                            </div>
-                            <span class="font-bold text-lg primary-text">$120</span>
-                        </div>
-                        <div class="flex flex-wrap gap-1 my-3">
-                            <span class="notes-badge bg-pink-100 text-pink-800">Floral</span>
-                            <span class="notes-badge bg-amber-100 text-amber-800">Aldehydic</span>
-                            <span class="notes-badge bg-yellow-100 text-yellow-800">Vanilla</span>
-                        </div>
-                        <div class="flex justify-between mt-4">
-                            <button class="secondary-bg text-primary px-4 py-2 rounded-lg font-medium">Details</button>
-                            <button class="primary-bg text-white px-4 py-2 rounded-lg font-medium">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Perfume Card 2 -->
-                <div class="perfume-card bg-white rounded-xl overflow-hidden">
-                    <div class="relative">
-                        <img src="https://placehold.co/400x400" alt="Dior Sauvage perfume with sleek dark bottle and metallic cap" class="w-full h-64 object-contain">
-                    </div>
-                    <div class="p-4">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h4 class="font-bold text-lg">Dior Sauvage</h4>
-                                <p class="text-gray-600 text-sm">Eau de Toilette</p>
-                            </div>
-                            <span class="font-bold text-lg primary-text">$95</span>
-                        </div>
-                        <div class="flex flex-wrap gap-1 my-3">
-                            <span class="notes-badge bg-blue-100 text-blue-800">Fresh</span>
-                            <span class="notes-badge bg-green-100 text-green-800">Aromatic</span>
-                            <span class="notes-badge bg-gray-100 text-gray-800">Ambergris</span>
-                        </div>
-                        <div class="flex justify-between mt-4">
-                            <button class="secondary-bg text-primary px-4 py-2 rounded-lg font-medium">Details</button>
-                            <button class="primary-bg text-white px-4 py-2 rounded-lg font-medium">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Perfume Card 3 -->
-                <div class="perfume-card bg-white rounded-xl overflow-hidden">
-                    <div class="relative">
-                        <img src="https://placehold.co/400x400" alt="Jo Malone Wood Sage & Sea Salt perfume with transparent bottle and cream label" class="w-full h-64 object-contain">
-                        <div class="absolute top-2 right-2">
-                            <span class="bg-purple-500 text-white text-xs px-2 py-1 rounded">Limited</span>
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h4 class="font-bold text-lg">Wood Sage & Sea Salt</h4>
-                                <p class="text-gray-600 text-sm">Cologne</p>
-                            </div>
-                            <span class="font-bold text-lg primary-text">$140</span>
-                        </div>
-                        <div class="flex flex-wrap gap-1 my-3">
-                            <span class="notes-badge bg-green-100 text-green-800">Woody</span>
-                            <span class="notes-badge bg-blue-100 text-blue-800">Marine</span>
-                            <span class="notes-badge bg-gray-100 text-gray-800">Mineral</span>
-                        </div>
-                        <div class="flex justify-between mt-4">
-                            <button class="secondary-bg text-primary px-4 py-2 rounded-lg font-medium">Details</button>
-                            <button class="primary-bg text-white px-4 py-2 rounded-lg font-medium">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Perfume Card 4 -->
-                <div class="perfume-card bg-white rounded-xl overflow-hidden">
-                    <div class="relative">
-                        <img src="https://placehold.co/400x400" alt="Tom Ford Black Orchid perfume with elegant black bottle and gold accents" class="w-full h-64 object-contain">
-                    </div>
-                    <div class="p-4">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <h4 class="font-bold text-lg">Black Orchid</h4>
-                                <p class="text-gray-600 text-sm">Eau de Parfum</p>
-                            </div>
-                            <span class="font-bold text-lg primary-text">$150</span>
-                        </div>
-                        <div class="flex flex-wrap gap-1 my-3">
-                            <span class="notes-badge bg-purple-100 text-purple-800">Floral</span>
-                            <span class="notes-badge bg-yellow-100 text-yellow-800">Spicy</span>
-                            <span class="notes-badge bg-black text-white">Dark</span>
-                        </div>
-                        <div class="flex justify-between mt-4">
-                            <button class="secondary-bg text-primary px-4 py-2 rounded-lg font-medium">Details</button>
-                            <button class="primary-bg text-white px-4 py-2 rounded-lg font-medium">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Show more button for demonstration -->
-                <div class="col-span-full text-center mt-8">
-                    <button class="primary-bg text-white px-6 py-3 rounded-lg font-medium">
-                        Load More Fragrances
-                    </button>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <!-- Newsletter -->
-    <section class="secondary-bg py-12 mt-16">
-        <div class="container mx-auto px-4 text-center">
-            <h3 class="text-2xl font-bold primary-text mb-2">Join Our Fragrance Community</h3>
-            <p class="text-gray-700 mb-6 max-w-2xl mx-auto">Get the latest arrivals, exclusive offers, and fragrance tips delivered to your inbox</p>
-            <div class="max-w-md mx-auto flex">
-                <input type="email" placeholder="Your email address" class="flex-1 p-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
-                <button class="primary-bg text-white px-6 py-3 rounded-r-lg font-medium">
-                    Subscribe
-                </button>
-            </div>
+    <div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-4xl font-semibold tracking-tight text-pretty text-white-900 sm:text-5xl">From the blog</h2>
+      <p class="mt-2 text-lg/8 text-gray-600">Learn how to grow your business with our expert advice.</p>
+    </div>
+    <div class="mx-auto mt-10 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      <article class="flex max-w-xl flex-col items-start justify-between">
+        <div class="flex items-center gap-x-4 text-xs">
+          <time datetime="2020-03-16" class="text-gray-500">Mar 16, 2020</time>
+          <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Marketing</a>
         </div>
-    </section>
+        <div class="group relative grow">
+          <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+            <a href="#">
+              <span class="absolute inset-0"></span>
+              Boost your conversion rate
+            </a>
+          </h3>
+          <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.</p>
+        </div>
+        <div class="relative mt-8 flex items-center gap-x-4 justify-self-end">
+          <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-10 rounded-full bg-gray-50" />
+          <div class="text-sm/6">
+            <p class="font-semibold text-gray-900">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                Michael Foster
+              </a>
+            </p>
+            <p class="text-gray-600">Co-Founder / CTO</p>
+          </div>
+        </div>
+      </article>
+      <article class="flex max-w-xl flex-col items-start justify-between">
+        <div class="flex items-center gap-x-4 text-xs">
+          <time datetime="2020-03-10" class="text-gray-500">Mar 10, 2020</time>
+          <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Sales</a>
+        </div>
+        <div class="group relative grow">
+          <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+            <a href="#">
+              <span class="absolute inset-0"></span>
+              How to use search engine optimization to drive sales
+            </a>
+          </h3>
+          <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">Optio cum necessitatibus dolor voluptatum provident commodi et. Qui aperiam fugiat nemo cumque.</p>
+        </div>
+        <div class="relative mt-8 flex items-center gap-x-4 justify-self-end">
+          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-10 rounded-full bg-gray-50" />
+          <div class="text-sm/6">
+            <p class="font-semibold text-gray-900">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                Lindsay Walton
+              </a>
+            </p>
+            <p class="text-gray-600">Front-end Developer</p>
+          </div>
+        </div>
+      </article>
+      <article class="flex max-w-xl flex-col items-start justify-between">
+        <div class="flex items-center gap-x-4 text-xs">
+          <time datetime="2020-02-12" class="text-gray-500">Feb 12, 2020</time>
+          <a href="#" class="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100">Business</a>
+        </div>
+        <div class="group relative grow">
+          <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
+            <a href="#">
+              <span class="absolute inset-0"></span>
+              Improve your customer experience
+            </a>
+          </h3>
+          <p class="mt-5 line-clamp-3 text-sm/6 text-gray-600">Cupiditate maiores ullam eveniet adipisci in doloribus nulla minus. Voluptas iusto libero adipisci rem et corporis. Nostrud sint anim sunt aliqua. Nulla eu labore irure incididunt velit cillum quis magna dolore.</p>
+        </div>
+        <div class="relative mt-8 flex items-center gap-x-4 justify-self-end">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-10 rounded-full bg-gray-50" />
+          <div class="text-sm/6">
+            <p class="font-semibold text-gray-900">
+              <a href="#">
+                <span class="absolute inset-0"></span>
+                Tom Cook
+              </a>
+            </p>
+            <p class="text-gray-600">Director of Product</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
 </body>
 </html>
 </x-layout>

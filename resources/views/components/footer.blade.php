@@ -1,4 +1,17 @@
  <!-- Footer -->
+ <!-- Newsletter -->
+    <section class="white secondary-bg py-12 mt-16">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold primary-text mb-2">Join Our Fragrance Community</h3>
+            <p class="text-gray-700 mb-6 max-w-2xl mx-auto">Get the latest arrivals, exclusive offers, and fragrance tips delivered to your inbox</p>
+            <div class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-1 p-3 rounded-l-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                <button class="primary-bg text-white px-6 py-3 rounded-r-lg font-medium">
+                    Subscribe
+                </button>
+            </div>
+        </div>
+    </section>
     <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -39,4 +52,5 @@
                 <p>© 2023 PerfumeFinder. All rights reserved.</p>
             </div>
         </div>
+        
     </footer>
