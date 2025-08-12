@@ -42,3 +42,7 @@ Route::get('/collections', function () {
 Route::get('/find', function () {
     return view('find',['title' => 'Find Your Scent - Fragrance Universe']);
 });
+
+Route::get('/drop', function () {
+    return view('drop',['title' => 'Drop Your Scent - Fragrance Universe']);
+});
