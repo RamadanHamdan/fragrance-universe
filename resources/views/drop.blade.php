@@ -66,6 +66,13 @@
                                         </select>
                                     </div>
                                     <div class="col-span-2">
+                                    <form class="max-w-lg mx-auto">
+                                    <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-900" for="user_avatar">Upload file</label>
+                                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="user_avatar_help" id="user_avatar" type="file">
+                                    <div class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="user_avatar_help"></div>
+                                    </form>
+                                    </div>
+                                    <div class="col-span-2">
                                         <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Product Description</label>
                                         <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-gray-500 focus:border-gray-500 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black dark:focus:ring-gray-500 dark:focus:border-gray-500" placeholder="Write product description here"></textarea>                    
                                     </div>
