@@ -6,6 +6,8 @@
         <section class="mb-16">
             <div class="max-w-4xl mx-auto p-8 rounded-xl bg-white search-box">
                 <h3 class="text-2xl font-semibold primary-text mb-6">Drop Your Fragrance</h3>
+                <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
             <!-- Main modal -->
                 <div id="crud-modal" aria-hidden="false">
                     <div class="max-w-4xl p-4 w-full max-h-full">
@@ -47,6 +49,10 @@
                                         <input type="number" name="price" id="price" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
                                     </div>
                                     <div class="col-span-2 sm:col-span-1">
+                                        <label for="stock" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Stock</label>
+                                        <input type="number" name="stock" id="stock" min="0" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="100" required="">
+                                    </div>
+                                    <div class="col-span-2 sm:col-span-1">
                                         <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Category</label>
                                         <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                             <option selected="">Select category</option>
@@ -56,8 +62,8 @@
                                         </select>
                                     </div>
                                     <div class="col-span-2 sm:col-span-1">
-                                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Size</label>
-                                        <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                        <label for="size" class="block mb-2 text-sm font-medium text-gray-900 dark:text-black">Size</label>
+                                        <select id="size" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-black dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                             <option selected="">Select Size</option>
                                             <option>5ml</option>
                                             <option>10ml</option>

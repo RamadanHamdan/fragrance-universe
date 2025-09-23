@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('category');
             $table->string('size');
             $table->string('image_url');
+            $table->integer('stock')->default(0);
             $table->text('description');
             $table->timestamps();
         });
