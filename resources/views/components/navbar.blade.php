@@ -8,12 +8,12 @@
                 </div>
                 <nav>
                     <ul class="flex space-x-6">
-                        <li><a href="home" class="hover:text-secondary transition">Home</a></li>
-                        <li><a href="collections" class="hover:text-secondary transition">Collections</a></li>
-                        <li><a href="find" class="hover:text-secondary transition">Find Your Scent</a></li>
-                        <li><a href="drop" class="hover:text-secondary transition">Drop Your Scent</a></li>
-                        <li><a href="about" class="hover:text-secondary transition">About</a></li>
-                        <li><a href="contact" class="hover:text-secondary transition">Contact</a></li>
+                        <li><a href="products.home" class="hover:text-secondary transition">Home</a></li>
+                        <li><a href="products.collections" class="hover:text-secondary transition">Collections</a></li>
+                        <li><a href="products.find" class="hover:text-secondary transition">Find Your Scent</a></li>
+                        <li><a href="products.drop" class="hover:text-secondary transition">Drop Your Scent</a></li>
+                        <li><a href="products.about" class="hover:text-secondary transition">About</a></li>
+                        <li><a href="products.contact" class="hover:text-secondary transition">Contact</a></li>
                     </ul>
                 </nav>
             </div>

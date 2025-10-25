@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use App\Models\Products;
@@ -10,33 +9,38 @@ use Illuminate\Http\RedirectResponse;
 
 class ProductController extends Controller
 {
-     /**
+   /**
+   * 
+   * Display a listing of the resource.
+   * 
+   * @return void
+   */
+
+   public function index() : View
+   {
+      $products = Products::latest()->paginate(10);
+
+      return view('products.collections', compact('products'));
+   }
+    /** 
+     * Show the form for creating a new product
      * 
-     * Display a listing of the resource.
-     * 
-     * @return void
+     * @return View
      */
+   public function create() : View
+   {
+      return view('products.drop');
+   }
 
-     public function index() : View
+   /**
+    * Store a newly created resource in storage.
+    * @param mixed $request
+    * @return RedirectResponse
+    */
+
+   public function store(Request $request): RedirectResponse
      {
-        $products = Products::latest()->paginate(10);
-
-        return view('products.collections', compact('products'));
-     }
-
-     public function create() : View
-     {
-        return view('products.drop');
-     }
-
-     /**
-      * Store a newly created resource in storage.
-      * @param mixed $request
-      * @return RedirectResponse
-      */
-
-     public function store(Request $request): RedirectResponse
-     {
+      // Validate the request data
         $request->validate([
             'name' => 'required',
             'top_notes' => 'required',
@@ -50,9 +54,24 @@ class ProductController extends Controller
             'description' => 'required',
         ]);
 
-        Products::create($request->all());
+        // upload image
+        $image = $request->file('image');
+        $image->storeAs('public/products', $image->hashName());
 
-        return redirect()->route('products.drop')
+        Products::create([
+            'name' => $request->name,
+            'top_notes' => $request->top_notes,
+            'middle_notes' => $request->middle_notes,
+            'base_notes' => $request->base_notes,
+            'price' => $request->price,
+            'category' => $request->category,
+            'size' => $request->size,
+            'image' => $image->hashName(),
+            'stock' => $request->stock,
+            'description' => $request->description,
+        ]);
+        // redirect to products drop with success message
+        return redirect()->route('products.collections')
             ->with('success', 'Product created successfully.');
      }
      

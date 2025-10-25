@@ -22,11 +22,11 @@
                 <div>
                     <h5 class="font-bold mb-4">Quick Links</h5>
                     <ul class="space-y-2">
-                        <li><a href="home" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="collections" class="text-gray-400 hover:text-white transition">Collections</a></li>
-                        <li><a href="find" class="text-gray-400 hover:text-white transition">Find Your Scent</a></li>
-                        <li><a href="about" class="text-gray-400 hover:text-white transition">About Us</a></li>
-                        <li><a href="contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        <li><a href="products.home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="products.collections" class="text-gray-400 hover:text-white transition">Collections</a></li>
+                        <li><a href="products.find" class="text-gray-400 hover:text-white transition">Find Your Scent</a></li>
+                        <li><a href="products.about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="products.contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
                 <div>

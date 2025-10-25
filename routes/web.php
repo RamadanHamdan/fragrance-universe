@@ -26,24 +26,24 @@ Route::middleware([
 
 Route::resource('/products', ProductController::class);
 
-Route::get('/home', function () {
-    return view('home',['title' => 'Home - Fragrance Universe']);
+Route::get('products.home', function () {
+    return view('products.home',['title' => 'Home - Fragrance Universe']);
 });
 
-Route::get('/about', function () {
-    return view('about',['title' => 'About - Fragrance Universe']);
+Route::get('products.about', function () {
+    return view('products.about',['title' => 'About - Fragrance Universe']);
 });
 
-Route::get('/contact', function () {
-    return view('contact',['title' => 'Contact - Fragrance Universe']);
+Route::get('products.contact', function () {
+    return view('products.contact',['title' => 'Contact - Fragrance Universe']);
 });
 
-Route::get('/collections', function () {
-    return view('collections',['title' => 'Collections - Fragrance Universe']);
+Route::get('products.collections', function () {
+    return view('products.collections',['title' => 'Collections - Fragrance Universe']);
 });
 
-Route::get('/find', function () {
-    return view('find',['title' => 'Find Your Scent - Fragrance Universe']);
+Route::get('products.find', function () {
+    return view('products.find',['title' => 'Find Your Scent - Fragrance Universe']);
 });
 
 Route::get('products.drop', function () {
